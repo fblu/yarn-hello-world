@@ -10,3 +10,4 @@ flows:
   default:
     - npm install -g yarn
     - yarn
+    - yarn start
