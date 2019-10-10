@@ -1,0 +1,12 @@
+tools:
+  nodejs: 10.16.3
+  npm: 6.9.0
+
+triggers:
+  push: disabled
+  pr: disabled
+
+flows:
+  default:
+    - npm install -g yarn
+    - yarn
