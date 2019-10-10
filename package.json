@@ -1,0 +1,10 @@
+{
+  "name": "yarn-hello-world",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Frieder Bluemle <frieder.bluemle@walmartlabs.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.2"
+  }
+}
