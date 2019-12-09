@@ -38,7 +38,7 @@ flows:
 This `.looper.yml` file can be found on the `looper-yarn` branch, and the diff
 can be seen here:
 
-[master..looper-yarn][2]
+[master..looper-yarn][4]
 
 A (currently) failing CI job:
 
