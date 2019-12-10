@@ -11,7 +11,10 @@ yarn start
 
 ## CI
 
-[yarn-hello-world-master][2]
+| Branch | Job | Status |
+| --- | --- | --- |
+| `master` | [`yarn-hello-world-master`][2] | [![Build Status][6]][7] |
+| `looper-yarn` | [`yarn-hello-world-looper-yarn`][5] | [![Build Status][8]][9] |
 
 ### Looper
 
@@ -40,12 +43,14 @@ can be seen here:
 
 [master..looper-yarn][4]
 
-A (currently) failing CI job:
-
-[yarn-hello-world-looper-yarn][5]
+Once support is available, both build jobs seen above should be green.
 
 [1]: https://yarnpkg.com/lang/en/
 [2]: https://ci.walmart.com/job/f0b00n7/job/yarn-hello-world-master/
 [3]: https://jira.walmart.com/browse/STRDTCI-29415
 [4]: https://gecgithub01.walmart.com/f0b00n7/yarn-hello-world/compare/master..looper-yarn
 [5]: https://ci.walmart.com/job/f0b00n7/job/yarn-hello-world-looper-yarn/
+[6]: https://ci.walmart.com/buildStatus/icon?job=f0b00n7/yarn-hello-world-master
+[7]: https://ci.walmart.com/job/f0b00n7/job/yarn-hello-world-master/
+[8]: https://ci.walmart.com/buildStatus/icon?job=f0b00n7/yarn-hello-world-looper-yarn
+[9]: https://ci.walmart.com/job/f0b00n7/job/yarn-hello-world-looper-yarn/
