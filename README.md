@@ -1,6 +1,6 @@
 # yarn-hello-world
 
-A simple "Hello world" project that uses [Yarn][1].
+A "Hello world" project that uses [Yarn][1].
 
 ## Run the project
 
@@ -18,24 +18,31 @@ yarn start
 
 ### Looper
 
-Currently (as of Oct 2019), Looper does not natively support Yarn, requiring
-_manual_ download and installation of Yarn prior to being able to use it. This
-in turn leads to having to globally modify slave state, and slower builds.
+Currently (as of Oct 2019), Walmart's build infrastructure [Looper][10] does not
+natively support Yarn. Projects using Yarn require _manual_ download,
+installation, and initialization of additional software prior to being able to
+use their package manager. This in turn leads to globally modified machine
+state, slower builds, and other potential issues.
+
+Yarn is the default package manager for many projects, including almost all
+repositories related to React Native. Mixing package managers (i.e. using _both_
+NPM and Yarn in the same project) leads to inconsistencies with lock files and
+may result in broken builds (depending on how the lock files are managed).
 
 A ticket has been opened to track progress on adding full support for Yarn on
 Looper: [STRDTCI-29415][3]
 
-The goal is to have a simple, minimal `.looper.yml` file with the following
+A minimal `.looper.yml` file for a Node.js/Yarn project would have the following
 structure:
 
 ```yaml
 tools:
-  nodejs: 13.2.0
-  yarn: 1.19.2
+  nodejs: 13.3.0
+  yarn: 1.21.1
 flows:
   default:
     - yarn
-    - yarn start
+    - yarn test
 ```
 
 This `.looper.yml` file can be found on the `looper-yarn` branch, and the diff
@@ -54,3 +61,4 @@ Once support is available, both build jobs seen above should be green.
 [7]: https://ci.walmart.com/job/f0b00n7/job/yarn-hello-world-master/
 [8]: https://ci.walmart.com/buildStatus/icon?job=f0b00n7/yarn-hello-world-looper-yarn
 [9]: https://ci.walmart.com/job/f0b00n7/job/yarn-hello-world-looper-yarn/
+[10]: http://looper.walmart.com/
