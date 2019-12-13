@@ -8,6 +8,10 @@
     "chalk": "^2.4.2"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "ava"
+  },
+  "devDependencies": {
+    "ava": "^2.4.0"
   }
 }
