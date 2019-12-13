@@ -1,8 +1,8 @@
 tools:
-  nodejs: 13.2.0
-  npm: 6.13.1
+  nodejs: 13.3.0
+  npm: 6.13.2
 flows:
   default:
     - npm install -g yarn
     - yarn
-    - yarn start
+    - yarn test
