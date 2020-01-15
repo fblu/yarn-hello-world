@@ -26,7 +26,7 @@ state, slower builds, and other potential issues.
 
 Yarn is the default package manager for many projects, including almost all
 repositories related to React Native. Mixing package managers (i.e. using _both_
-NPM and Yarn in the same project) leads to inconsistencies with lock files and
+npm and Yarn in the same project) leads to inconsistencies with lock files and
 may result in broken builds (depending on how the lock files are managed).
 
 A ticket has been opened to track progress on adding full support for Yarn on
