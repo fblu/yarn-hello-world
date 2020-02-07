@@ -75,8 +75,8 @@ For example build run 9 and run 10 built the same exact commit (same codebase,
 same `.looper.yml`), just using two different executors. The build failed on
 `looper-ci-sv4-20` (build 9) while it succeeded on `looper-ci-sv4-2` (build 10):
 
-https://ci.walmart.com/job/f0b00n7/job/yarn-hello-world-2/9/console
-https://ci.walmart.com/job/f0b00n7/job/yarn-hello-world-2/10/console
+- https://ci.walmart.com/job/f0b00n7/job/yarn-hello-world-2/9/console
+- https://ci.walmart.com/job/f0b00n7/job/yarn-hello-world-2/10/console
 
 ## Links
 
