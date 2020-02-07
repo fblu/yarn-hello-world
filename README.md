@@ -1,43 +1,50 @@
 # yarn-hello-world
 
+[![Built with Looper][7]][6]
+
 A "Hello world" project that uses [Yarn][1].
 
-## Run the project
+## Getting Started
+
+### Download dependencies
 
 ```sh
 yarn
+```
+
+### Run the app
+
+```sh
 yarn start
+```
+
+### Run the tests
+
+```sh
+yarn test
 ```
 
 ## CI
 
 | Branch | Job | Status |
 | --- | --- | --- |
-| `master` | [`yarn-hello-world-master`][2] | [![Build Status][6]][7] |
-| `looper-yarn` | [`yarn-hello-world-looper-yarn`][5] | [![Build Status][8]][9] |
+| `master` | [`yarn-hello-world`][2] | [![Build Status][4]][5] |
 
 ### Looper
 
-Currently (as of Oct 2019), Walmart's build infrastructure [Looper][10] does not
-natively support Yarn. Projects using Yarn require _manual_ download,
-installation, and initialization of additional software prior to being able to
-use their package manager. This in turn leads to globally modified machine
-state, slower builds, and other potential issues.
+This repo was initially used to test Yarn support on Looper.
 
-Yarn is the default package manager for many projects, including almost all
-repositories related to React Native. Mixing package managers (i.e. using _both_
-npm and Yarn in the same project) leads to inconsistencies with lock files and
-may result in broken builds (depending on how the lock files are managed).
+Support for Yarn on Looper has been added in Jan 2020, tracked in
+[STRDTCI-29415][3].
 
-A ticket has been opened to track progress on adding full support for Yarn on
-Looper: [STRDTCI-29415][3]
+This repo has been switched to use this new syntax in
+9d5fb5d18023c9f2858d3be72fa33de4b27b0997.
 
-A minimal `.looper.yml` file for a Node.js/Yarn project would have the following
-structure:
+A minimal `.looper.yml` file for a Node.js/Yarn project looks like this:
 
 ```yaml
 tools:
-  nodejs: 13.3.0
+  nodejs: 13.8.0
   yarn: 1.21.1
 flows:
   default:
@@ -45,20 +52,25 @@ flows:
     - yarn test
 ```
 
-This `.looper.yml` file can be found on the `looper-yarn` branch, and the diff
-can be seen here:
+Even though `yarn` is now a valid statement in the `tools` section, as of Feb
+2020, access to Yarn's default package registry `yarnpkg.com` remains limited
+and requires additional workarounds.
 
-[master..looper-yarn][4]
+```
+There appears to be trouble with your network connection. Retrying...
+```
 
-Once support is available, both build jobs seen above should be green.
+## Links
+
+The same exact project that uses npm instead of Yarn can be found here:
+
+[`npm-hello-world`][8]
 
 [1]: https://yarnpkg.com/lang/en/
 [2]: https://ci.walmart.com/job/f0b00n7/job/yarn-hello-world-master/
 [3]: https://jira.walmart.com/browse/STRDTCI-29415
-[4]: https://gecgithub01.walmart.com/f0b00n7/yarn-hello-world/compare/master..looper-yarn
-[5]: https://ci.walmart.com/job/f0b00n7/job/yarn-hello-world-looper-yarn/
-[6]: https://ci.walmart.com/buildStatus/icon?job=f0b00n7/yarn-hello-world-master
-[7]: https://ci.walmart.com/job/f0b00n7/job/yarn-hello-world-master/
-[8]: https://ci.walmart.com/buildStatus/icon?job=f0b00n7/yarn-hello-world-looper-yarn
-[9]: https://ci.walmart.com/job/f0b00n7/job/yarn-hello-world-looper-yarn/
-[10]: http://looper.walmart.com/
+[4]: https://ci.walmart.com/buildStatus/icon?job=f0b00n7/yarn-hello-world-master
+[5]: https://ci.walmart.com/job/f0b00n7/job/yarn-hello-world-master/
+[6]: http://looper.walmart.com/
+[7]: https://img.shields.io/badge/Built%20With-Looper-blue.svg
+[8]: https://gecgithub01.walmart.com/f0b00n7/npm-hello-world
