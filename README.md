@@ -57,8 +57,14 @@ Even though `yarn` is now a valid statement in the `tools` section, as of Feb
 2020, access to Yarn's default package registry `yarnpkg.com` remains limited
 and requires additional workarounds. Check the `test` branch for details.
 
+Errors commonly encountered:
+
 ```
 There appears to be trouble with your network connection. Retrying...
+```
+
+```
+error An unexpected error occurred: "https://registry.yarnpkg.com/<package>.tgz: unable to get local issuer certificate".
 ```
 
 ## Links
