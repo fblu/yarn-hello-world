@@ -6,3 +6,5 @@ flows:
     - npm install -g yarn
     - yarn
     - yarn test
+  pr:
+    - call: default
