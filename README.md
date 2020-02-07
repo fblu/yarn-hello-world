@@ -28,7 +28,8 @@ yarn test
 
 | Branch | Job | Status |
 | --- | --- | --- |
-| `master` | [`yarn-hello-world`][2] | [![Build Status][4]][5] |
+| `master` | [`yarn-hello-world`][2] | [![Build Status][4]][2] |
+| `test` | [`yarn-hello-world`][5] | [![Build Status][9]][5] |
 
 ### Looper
 
@@ -54,7 +55,7 @@ flows:
 
 Even though `yarn` is now a valid statement in the `tools` section, as of Feb
 2020, access to Yarn's default package registry `yarnpkg.com` remains limited
-and requires additional workarounds.
+and requires additional workarounds. Check the `test` branch for details.
 
 ```
 There appears to be trouble with your network connection. Retrying...
@@ -67,10 +68,11 @@ The same exact project that uses npm instead of Yarn can be found here:
 [`npm-hello-world`][8]
 
 [1]: https://yarnpkg.com/lang/en/
-[2]: https://ci.walmart.com/job/f0b00n7/job/yarn-hello-world-master/
+[2]: https://ci.walmart.com/job/f0b00n7/job/yarn-hello-world/
 [3]: https://jira.walmart.com/browse/STRDTCI-29415
-[4]: https://ci.walmart.com/buildStatus/icon?job=f0b00n7/yarn-hello-world-master
-[5]: https://ci.walmart.com/job/f0b00n7/job/yarn-hello-world-master/
+[4]: https://ci.walmart.com/buildStatus/icon?job=f0b00n7/yarn-hello-world
+[5]: https://ci.walmart.com/job/f0b00n7/job/yarn-hello-world-2
 [6]: http://looper.walmart.com/
 [7]: https://img.shields.io/badge/Built%20With-Looper-blue.svg
 [8]: https://gecgithub01.walmart.com/f0b00n7/npm-hello-world
+[9]: https://ci.walmart.com/buildStatus/icon?job=f0b00n7/yarn-hello-world-2
