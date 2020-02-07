@@ -53,8 +53,9 @@ flows:
 ```
 
 Even though `yarn` is now a valid statement in the `tools` section, as of Feb
-2020, access to Yarn's default package registry `yarnpkg.com` remains limited
-and requires additional workarounds. Check the `test` branch for attempts.
+2020, access to Yarn's default package registry `registry.yarnpkg.com` remains
+limited and requires additional setup and workarounds. Check the `test` branch
+for attempts.
 
 Errors commonly encountered:
 
